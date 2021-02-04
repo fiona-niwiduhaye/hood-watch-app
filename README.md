@@ -20,7 +20,7 @@ This project uses major technologies which are :
 5.Postgress Database
 
 ### Live link
-You can view the project through this link: 
+You can view the project through this link: https://fiowatch-hood.herokuapp.com/
 
 Contact Information
 Email:fionaniwe@gmail.com
