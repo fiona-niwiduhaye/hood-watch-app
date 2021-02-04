@@ -1,0 +1,35 @@
+{%extends 'base.html'%} 
+{% block content %}
+
+<div class="container-fluid" style="margin-top:7%">
+    
+    {% if businesses%}
+    <h2 class="slogan" style=" text-align: center">Found {{ businesses|length }} businesses that match "{{message}}" in all neigbourhoods!</h2>
+    {% else %}
+    <h2 class="slogan" style=" text-align: center">Found 0 businesses that matched "{{message}}"</h2>
+    {% endif %}
+  </div>
+</div>
+<div class="container" style="padding-top:3%">
+  {% if businesses %}
+    {% for business in businesses %}
+    <div class="col-md-4" style="padding:1%">
+        <div class="card border border-info" id="borderid">
+      <div style="margin:2%">
+          <br>
+          <p style="float:right"> <strong>Location:{{business.business_neighbourhood}}</strong> </p> 
+          <p class="heading">{{business.business_name}}</p>
+          <hr>
+          <p> {{business.business_description}}</p>
+          
+          <p style="float:right">{{business.business_email}}</p>
+              <p>Contact Person:{{business.contact_person}}</p>
+      </div>
+  </div>
+</div>
+    {% endfor %}
+  {% endif %}
+  
+
+</div>
+{% endblock %}
