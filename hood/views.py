@@ -11,6 +11,9 @@ from .models import Profile, Businesses, Posts
 
 
 
+
+
+
 def home(request):
     try:
         profile = Profile.objects.filter(user_id=request.user.id)
